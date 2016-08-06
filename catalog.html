@@ -1,4 +1,4 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="utf-8">
@@ -31,8 +31,8 @@
           </ul>
         </nav>
         <div class="user-block">
-          <img src="img/icon-login.png" width="18" height="16" alt="Вход">
-        <!--Нужна ли здесь картинка или задается как то через CSS?-->
+          <span class="icon-login"></span>
+        <!--Изначально была картинка-->
           <a class="login" href="#">Вход</a>
         </div>
       </div>
@@ -48,41 +48,28 @@
         <a href="#">Магазин</a>
       </li>
       <li>
-        <a href="#">Средства для ухода</a>
-        <!--Последняя кнопка в цепочке остается неактивна, либо это убирается скриптами?-->
+        <span>Средства для ухода</span>
       </li>
     </ul>
     <main class="container">
-      <div class="filter">
-        <h2>Производители</h2>
-        <form class="manufacturer-choise">
-          <input id="baxter" type="checkbox" value="" checked>
-          <label for="baxter">Baxter of California</label><br>
-          <input id="natty" type="checkbox" value="">
-          <label for="natty">Mr Natty</label><br>
-          <input id="suavecito" type="checkbox" value="" checked>
-          <label for="suavecito">Suavecito</label><br>
-          <input id="malin" type="checkbox" value="">
-          <label for="malin">Malin+Goetz</label><br>
-          <input id="murray" type="checkbox" value="">
-          <label for="murray">Murray's</label><br>
-          <input id="crew" type="checkbox" value="" checked>
-          <label for="crew">American crew</label>
-          <!--Что правильнее записывать в знаечения value"-->
-        </form>
-        <h2>Группы товаров</h2>
-        <form class="group-choise">
-          <input id="shaving" type="radio" value="">
-          <label for="shaving">Бритвенные принадлежности</label><br>
-          <input id="care" type="radio" value="" checked>
-          <label for="care">Средства для ухода</label><br>
-          <input id="accessories" type="radio" value="">
-          <label for="accessories">Аксессуары</label>
-          <!--Что правильнее записывать в знаечения value"-->
-        </form>
-        <a class="show" href="#">Показать</a>
-        <!--<button> ???-->
-      </div>
+      <form  class="filter">
+        <fieldset class="manufacturer">
+          <legend>Производители</legend>
+          <label><input type="checkbox" name="manufacturer" value="Baxter of California" checked>Baxter of California</label>
+          <label><input type="checkbox" name="manufacturer" value="Mr Natty">Mr Natty</label>
+          <label><input type="checkbox" name="manufacturer" value="Suavecito" checked>Suavecito</label>
+          <label><input type="checkbox" name="manufacturer" value="Malin+Goetz">Malin+Goetz</label>
+          <label><input type="checkbox" name="manufacturer" value="Murray's">Murray's</label>
+          <label><input type="checkbox" name="manufacturer" value="American crew" checked>American crew</label>
+        </fieldset>
+        <fieldset class="group">
+          <legend>Группы товаров</legend>
+          <label><input type="radio" name="group" value="shaving">Бритвенные принадлежности</label>
+          <label><input type="radio" name="group" value="care" checked>Средства для ухода</label>
+          <label><input type="radio" name="group" value="acessories">Аксессуары</label>
+        </fieldset>
+        <button class="show" type="btn"> Показать</button>
+      </form>
       <section class="shop">
           <article class="item">
             <img src="img/baxter-travel.png" width="220" height="165" alt="Набор для путешествий">
@@ -151,10 +138,12 @@
             <!--<button> ???-->
           </article>
       </section>
-      <a class="page" href="#">1</a>
-      <a class="page" href="#">2</a>
-      <a class="page" href="#">3</a>
-      <a class="page" href="#">4</a>
+      <div class="pagination">
+        <a class="page" href="#">1</a>
+        <span class="active">2</span>
+        <a class="page" href="#">3</a>
+        <a class="page" href="#">4</a>
+      </div>
     </main>
     <!--Конец главного блока-->
     <!--Подвал-->
